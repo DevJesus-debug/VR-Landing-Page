@@ -1,0 +1,618 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --padding:0 20px;
+    --mobile-margin:90px 0;
+    --main-text:'Josefin Sans', sans-serif;
+    --logo-text: 'Alata', sans-serif;
+    --desktop-padding:0 6rem;
+}
+
+
+body.stop-scroll{
+    overflow: hidden;
+}
+
+/*Mobile First Approach*/
+.header-wraper{
+    background-image: url('../loopstudios-landing-page-main/images/mobile/image-hero.jpg');
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: var(--padding);
+}
+
+header{
+    width: 100%;
+    height: 15vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+nav{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    
+}
+
+
+
+nav .mobile-nav{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: black;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+    transform: translateX(-100%);
+    transition: ease-in .5s;
+}
+
+nav .mobile-nav.open{
+    transform: translateX(0);
+    transition: ease-in .5s;
+}
+
+
+
+nav .mobile-nav li{
+    list-style: none;
+    margin-bottom: 50x;
+    color: white;
+    padding: 15px;
+    font-size: 30px;
+    font-family: var(--main-text);
+    text-transform: uppercase;
+    width: 180px;
+    height: 65px;
+}
+
+nav .mobile-nav li:hover{
+    border-bottom: solid white 2px;
+}
+
+.logo{
+    z-index: 100;
+}
+
+.logo a{
+    text-decoration: none;
+    color: white;
+    font-size: 2rem;
+    font-family: var(--logo-text);
+}
+
+.hamburger{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    margin-top: 10px;
+}
+
+.hamburger .line{
+    background-color: white;
+    height: 3px;
+    margin: 3px 0;
+    width: 30px;
+    transition: ease-in .5s;
+}
+
+.hamburger.active .line-2{
+    opacity: 0;
+    
+}
+
+.hamburger.active .line-1{
+    transform: translate(0,10px) rotate(-45deg);
+    transition: ease-in .5s;
+}
+
+.hamburger.active .line-3{
+    transform: translate(0,-7px) rotate(45deg);
+    transition: ease-in .5s;
+}
+
+ .header-wraper h1{
+    margin-top: 8rem;
+    color: white;
+    font-size: 2.5rem;
+    padding: 25px;
+    border: solid 2px white;
+    font-family: var(--main-text);
+    width: 100%;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    padding: var(--padding);
+    gap: 40px;
+    margin: var(--mobile-margin);
+    width: 100%;
+    overflow:hidden;
+}
+
+main .img-cont{
+    height: 30vh;
+    width: 100%;   
+    background:url('../loopstudios-landing-page-main/images/mobile/image-interactive.jpg') ;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+.text-cont{
+    text-align: center;
+    font-family: var(--main-text);
+}
+
+.text-cont h2{
+    font-size: 31px;
+}
+
+.text-cont p{
+    font-family: var(--text-2);
+    margin-top: 23px;
+    padding: 0 10px;
+}
+
+.grid-section{
+    display: grid;
+    margin-bottom: 90px;
+    gap: 30px;
+    padding: var(--padding);
+    grid-template-areas: 
+    "h"
+    "img1"
+    "img2"
+    "img3"
+    "img4"
+    "img5"
+    "img6"
+    "img7"
+    "img8"
+    "button"
+    ;
+}
+
+.grid-section h3{
+    grid-area: h;
+    text-align: center;
+    font-family: var(--main-text);
+    font-size: 30px;
+    margin-bottom: 17px;
+}
+
+.grid-section button{
+    grid-area: button;
+    width: 150px;
+    background-color: white;
+    font-size: 18px;
+    font-family: var(--logo-text);
+    letter-spacing: 4px;
+    margin: 0 auto;
+    padding: 8px 0;
+}
+
+.grid-section button:hover{
+    color: white;
+    background: black;
+}
+
+.grid-section .img-card{
+    height: 20vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.grid-section .img-card p{
+    color: white;
+    font-size: 25px;
+    font-family: var(--main-text);
+    text-transform: uppercase;
+    display: flex;
+    padding: 20px;
+    align-items: flex-end;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.507),rgba(255, 255, 255, 0));
+    height: 100%;
+    width: 100%;
+}
+
+.grid-section .img-card p:hover{
+    background:rgba(255, 255, 255, 0.726);
+    color: black;
+}
+
+
+.grid-section .img-card.slide-1{
+    background-image: url("../loopstudios-landing-page-main/images/mobile/image-deep-earth.jpg");
+    grid-area: img1;
+}
+
+.grid-section .img-card.slide-2{
+    background-image: url("../loopstudios-landing-page-main/images/mobile/image-night-arcade.jpg");
+    grid-area: img2;
+}
+
+.grid-section .img-card.slide-3{
+    background-image: url("../loopstudios-landing-page-main/images/mobile/image-soccer-team.jpg");
+    grid-area: img3;
+}
+
+.grid-section .img-card.slide-4{
+    background-image: url("../loopstudios-landing-page-main/images/mobile/image-grid.jpg");
+    grid-area: img4;
+}
+
+.grid-section .img-card.slide-5{
+    background-image: url("../loopstudios-landing-page-main/images/mobile/image-from-above.jpg");
+    grid-area: img5;
+}
+
+.grid-section .img-card.slide-6{
+    background-image: url("../loopstudios-landing-page-main/images/mobile/image-pocket-borealis.jpg");
+    grid-area: img6;
+}
+
+.grid-section .img-card.slide-7{
+    background-image: url("../loopstudios-landing-page-main/images/mobile/image-curiosity.jpg");
+    grid-area: img7;
+}
+
+.grid-section .img-card.slide-8{
+    background-image: url("../loopstudios-landing-page-main/images/mobile/image-fisheye.jpg");
+    grid-area: img8;
+}
+
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: black;
+    padding: 60px 0;
+}
+
+footer .logo-cont{
+   display: flex;
+   align-items:center;
+   flex-direction: column;
+   text-align: center;
+}
+
+footer .logo-cont .logo {
+    font-family: var(--logo-text);
+    color: white;
+    margin:0 0 20px 0;
+    font-size: 30px;
+}
+
+
+
+footer .footer-ul li {
+    color: white;
+    list-style: none;
+    margin:30px;
+    font-family: var(--main-text);
+    font-size:20px;
+    height: 30px;
+    width: 80px;
+    padding-bottom: 5px;
+}
+
+footer .footer-ul li:hover {
+  border-bottom: solid white 2px;
+  cursor: pointer;
+}
+
+footer .media-icons{
+    color: white;
+    padding-bottom: 5px;
+}
+
+footer .media-icons .media-ul{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    height: 60px;
+}
+
+footer .media-icons .media-ul li{
+    margin: 15px 7px 0px 7px;
+    height: 40px;
+    list-style: none;
+    font-size: 30px;
+}
+
+footer .media-icons .media-ul li:hover{
+   border-bottom: solid 2px white;
+}
+
+footer .media-icons p{
+    font-family: var(--text-2);
+    color: rgba(223, 223, 223, 0.76);
+    font-size: 20px;
+    margin-top: 10px;
+} 
+
+footer .attribution{
+    color: white;
+    text-align: center;
+    margin-top: 20px;
+    font-family: var(--main-text);
+    font-size: 20px;
+}
+
+footer .attribution a{
+    color: white;
+   
+}
+
+@media screen and (min-width:1000px){
+    .hamburger{
+        display: none;
+    }
+
+    header{
+        height: 20vh;
+    }
+    nav{
+        align-items: center;
+    }
+
+    nav .mobile-nav {
+        position: relative;
+        display: flex;
+        flex-direction: initial;
+        align-items: center;
+        justify-content: center;
+        transform: translateX(0);
+        background-color: transparent;
+        transition: none;
+    }
+
+    nav .mobile-nav li{
+        color: white;
+        font-family: var(--logo-text);
+        list-style: none;
+        padding: 0;
+        cursor: pointer;
+        font-size: 16px;
+        width: auto;
+        height: 23px;
+        margin-left: 20px;
+    }
+
+    nav ul li:hover{
+        border-bottom: 2px white solid;
+    }
+
+    .logo{
+        font-size: 35px;
+        color: white;
+    }
+
+    .header-wraper{
+        padding:var(--desktop-padding);
+        height: 80vh;
+        background-size: cover;
+        background-position: top;
+        background-image: url('../loopstudios-landing-page-main/images/desktop/image-hero.jpg');
+    }
+
+    .header-wraper h1{
+        width: 600px;
+        font-size: 3.9rem;
+        margin-top: 5.8rem;
+        padding: 26px 45px;
+    }
+
+    .main-wraper{
+        width: 100%;
+        max-width: 1440px;
+        margin: 0 auto;
+    }
+
+    main{
+        flex-direction: initial;
+        padding: var(--desktop-padding);
+        gap: 0;
+        margin: var(--mobile-margin);
+        position: relative;
+    }
+
+    main .img-cont{
+        width: 75%;
+        height: 50vh;
+    }
+
+
+    main .text-cont{
+        width: 620px;
+        position: absolute;
+        padding: 100px 80px;
+        background: white;
+        right: -20px;
+        bottom: -60px;
+    }
+    
+    main .text-cont h2{
+        font-size: 45px;
+        text-align: initial;
+    }
+
+    main .text-cont p{
+        font-size: 16px;
+        text-align: initial;
+        line-height: 27px;
+        padding-right: 30px;
+    }
+
+    .grid-section{
+        margin: 180px 0;
+        padding: var(--desktop-padding);
+        grid-template-areas: 
+        "h h . button"
+        "img1 img2 img3 img4"
+        "img5 img6 img7 img8"
+        ;
+        place-content: center;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 70px 460px 460px;
+
+
+    }
+
+    .grid-section h3{
+        grid-area: h;
+        width: 100%;
+        text-align:initial;
+        font-family: var(--main-text);
+        font-size: 30px;
+    }
+    
+    .grid-section button{
+        grid-area: button;
+        margin-left: 100px;
+        padding: 5px 0;
+        height: 40px;
+        font-size: 16px;
+        font-family: var(--logo-text);
+    }
+
+    .grid-section .img-card{
+       height: 100%;
+
+    }
+
+    .grid-section .img-card p{
+        justify-content:initial;
+        padding: 40px;
+        font-size: 35px;
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.602),rgba(255, 255, 255, 0));
+    }
+
+    
+
+    .grid-section h3{
+        font-size: 35px;
+    }
+
+    
+    .grid-section .img-card.slide-1{
+        background-image: url("../loopstudios-landing-page-main/images/desktop/image-deep-earth.jpg");
+        grid-area: img1;
+    }
+
+    .grid-section .img-card.slide-2{
+        background-image: url("../loopstudios-landing-page-main/images/desktop/image-night-arcade.jpg");
+        grid-area: img2;
+    }
+
+    .grid-section .img-card.slide-3{
+        background-image: url("../loopstudios-landing-page-main/images/desktop/image-soccer-team.jpg");
+        grid-area: img3;
+    }
+
+    .grid-section .img-card.slide-4{
+        background-image: url("../loopstudios-landing-page-main/images/desktop/image-grid.jpg");
+        grid-area: img4;
+    }
+
+    .grid-section .img-card.slide-5{
+        background-image: url("../loopstudios-landing-page-main/images/desktop/image-from-above.jpg");
+        grid-area: img5;
+    }
+
+    .grid-section .img-card.slide-6{
+        background-image: url("../loopstudios-landing-page-main/images/desktop/image-pocket-borealis.jpg");
+        grid-area: img6;
+    }
+
+    .grid-section .img-card.slide-7{
+        background-image: url("../loopstudios-landing-page-main/images/desktop/image-curiosity.jpg");
+        grid-area: img7;
+    }
+
+    .grid-section .img-card.slide-8{
+        background-image: url("../loopstudios-landing-page-main/images/desktop/image-fisheye.jpg");
+        grid-area: img8;
+    }
+
+    footer{
+        width: 100%;
+        padding:30px 0
+    }
+
+
+    footer .footer-cont{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        align-items: center;
+        height: 120px;
+        padding: var(--desktop-padding);
+    }
+
+    footer .logo-cont{
+        align-items: initial;
+    }
+
+
+    footer .logo-cont .logo {
+        text-align: initial;
+        margin-bottom: 30px;
+    }
+
+
+    footer .footer-ul {
+        display: flex;
+    }
+
+    footer .footer-ul li{
+        margin: 0;
+        width: auto;
+        margin-right: 20px;
+    }
+
+    footer .media-icons .media-ul{
+        margin-top: 0;
+        justify-content: flex-end;
+        height: 50px;
+    }
+
+    footer .media-icons .media-ul li{
+        margin:0 10px ;
+        font-size: 30px;
+    }
+
+    footer .attribution{
+        margin-top: 30px;
+    }
+    
+
+
+
+
+
+}
+
