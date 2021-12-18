@@ -13,7 +13,7 @@
     --mobile-margin:90px 0;
     --main-text:'Josefin Sans', sans-serif;
     --logo-text: 'Alata', sans-serif;
-    --desktop-padding:0 6rem;
+    --desktop-padding:0 12rem;
 }
 
 
@@ -373,7 +373,7 @@ footer .attribution a{
     }
 
     header{
-        height: 20vh;
+        height: 17vh;
     }
     nav{
         align-items: center;
@@ -396,24 +396,24 @@ footer .attribution a{
         list-style: none;
         padding: 0;
         cursor: pointer;
-        font-size: 16px;
+        font-size: 14px;
         width: auto;
         height: 23px;
-        margin-left: 20px;
+        margin-left: 25px;
     }
 
     nav ul li:hover{
         border-bottom: 2px white solid;
     }
 
-    .logo{
-        font-size: 35px;
+    .logo a{
+        font-size: 2.5rem;
         color: white;
     }
 
     .header-wraper{
         padding:var(--desktop-padding);
-        height: 80vh;
+        height: 65vh;
         background-size: cover;
         background-position: top;
         background-image: url('../loopstudios-landing-page-main/images/desktop/image-hero.jpg');
@@ -441,7 +441,7 @@ footer .attribution a{
     }
 
     main .img-cont{
-        width: 75%;
+        width: 69%;
         height: 50vh;
     }
 
@@ -451,8 +451,8 @@ footer .attribution a{
         position: absolute;
         padding: 100px 80px;
         background: white;
-        right: -20px;
-        bottom: -60px;
+        right: 70px;
+        bottom: -150px;
     }
     
     main .text-cont h2{
