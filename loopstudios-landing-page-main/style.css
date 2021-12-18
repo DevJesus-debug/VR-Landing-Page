@@ -397,6 +397,7 @@ footer .attribution a{
         padding: 0;
         cursor: pointer;
         font-size: 14px;
+        text-transform: capitalize;
         width: auto;
         height: 23px;
         margin-left: 25px;
@@ -407,7 +408,7 @@ footer .attribution a{
     }
 
     .logo a{
-        font-size: 2.5rem;
+        font-size: 2rem;
         color: white;
     }
 
