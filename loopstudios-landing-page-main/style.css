@@ -477,7 +477,7 @@ footer .attribution a{
         "img5 img6 img7 img8"
         ;
         place-content: center;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 250px 250px 250px 250px;
         grid-template-rows: 70px 460px 460px;
 
 
@@ -488,7 +488,7 @@ footer .attribution a{
         width: 100%;
         text-align:initial;
         font-family: var(--main-text);
-        font-size: 30px;
+        font-size: 25px;
     }
     
     .grid-section button{
@@ -508,7 +508,7 @@ footer .attribution a{
     .grid-section .img-card p{
         justify-content:initial;
         padding: 40px;
-        font-size: 35px;
+        font-size: 30px;
         background: linear-gradient(to top, rgba(0, 0, 0, 0.602),rgba(255, 255, 255, 0));
     }
 
